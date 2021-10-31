@@ -17,14 +17,38 @@ namespace HomeWork3._2
             {
                 Console.WriteLine(" Введите номинал каждой карты. Обращаю ваше внимание: \n Валет - J \n Дама - Q \n Король - К \n Туз - Т");
                 String Index = Console.ReadLine();
-                    if (Index == "J" || Index == "Q" || Index == "K" || Index == "T")
+                switch (Index)
                     {
-                        sum =+ 10;
-                    }
-                    else
-                    {
-                        int card = Convert.ToInt32(Index);
-                        sum = + card;
+                    case "6":
+                        sum = + 6;
+                        break;
+                    case "7":
+                        sum = + 7;
+                        break;
+                    case "8":
+                        sum = + 8;
+                        break;
+                    case "9":
+                        sum = + 9;
+                        break;
+                    case "10":
+                        sum = + 10;
+                        break;
+                    case "J":
+                        sum = + 10;
+                        break;
+                    case "Q":
+                        sum = + 10;
+                        break;
+                    case "K":
+                        sum = + 10;
+                        break;
+                    case "T":
+                        sum = + 10;
+                        break;
+                    default:
+                        Console.WriteLine("Таких карт в колоде нет");
+                        break;
                     }
             }
             Console.WriteLine($"Сумма значений карт ровна = {sum}");
